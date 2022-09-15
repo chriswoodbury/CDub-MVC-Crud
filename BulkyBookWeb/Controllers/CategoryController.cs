@@ -77,6 +77,12 @@ namespace BulkyBookWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category obj)
         {
+            var cat = _db.Categories.FirstOrDefault(ct => ct.Name == obj.Name);
+            if (cat != null)
+            {
+                ModelState.AddModelError("name", "This Category already exists.");
+            }
+
             if (obj.Name == obj.DisplayOrder.ToString())
             {
                 ModelState.AddModelError("name", "The Display Order cannot have the same value as the Name.");

@@ -1,4 +1,4 @@
-# .NET Core 6.0 - ASP.NET MVC - Full CRUD Capabilities
+.NET Core 6.0 - ASP.NET MVC - Full CRUD Capabilities
 
 Maintain a list of Categories -  [Run the application](https://cdub-mvc.azurewebsites.net)
 
